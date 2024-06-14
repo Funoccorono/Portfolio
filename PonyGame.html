@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="project-content">
+                <div>
+                    <h3 style="text-align: center">Pony Game</h3>
+                    <p>
+                        At first this project was supposed to be about developing a horse themed obstacle jumping game with fairly simple low-poly graphics. I have modelled a low-poly pony years ago during my free time which I was going to use for this project originally. 
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Inspiraatio</h4>
+                    <p>
+                        Moss pelin päähenkilö Quill vaikutti suurelta osin siihen millaisen pelaajahahmon halusin peliin. Olin ajatellut alunperin jonkinlaista ihmismäistä koiraeläintä, mutta halusin kokeilla jotain erilaista. Pelasin vähän aikaa sitten läpi Mossin ja tykästyin päähenkilöön. Törmäsin myös sattumalta <a href="https://www.youtube.com/watch?v=u3CzLVpuE4k">tähän</a> videoon, jossa Quillin animoinut pelinkehittäjä kertoo kuinka hahmolle pyrittiin luomaan kyky vaikuttaa pelaajan tunnetiloihin. Grafiikkatyylin inspiraationa toiminut osittain Legend of Zelda: Breath of the Wild siinä olevan cell shadingin vuoksi.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Projektin eteneminen</h4>
+                <p>
+                    Projektin aloitin sijoittelemalla placeholdereita hahmolle sekä muutamia ympäristöön liittyviä asioita kuten maahan tekstuuria ja puita. Alunperin olikin tarkoitus käyttää ainakin alkuun vain valmiita assetteja, joita on tullut ostettua vuosien varrella, tai vaihtoehtoisesti ilmaiseksi saatavilla olevia. 
+                    <br>
+                    <br>
+                    Melko pian sain kuitenkin idean tehdä pelaajahahmon itse. Blenderistä on runsaasti aiempaa kokemusta, joten mallinnus ja animaatiot valmistuivat melko nopeasti. Mallin tekeminen sekä animointi olivat kuitenkin mukavaa harjoitusta ja mieleenpalauttelua, sillä edellisestä mallinnusprojektista on jonkin aikaa. Enemmän ongelmia aiheutti Blenderin ja Unityn yhteistyö tai  enemmänkin sen puute, kun animaatioista toisinaan puuttui osa, tai ne näyttivät aivan muulta kuin niiden kuuluisi.
+                </p>
+                <div>
+                    <img src="dopesheet.PNG" class="content_img">
+                </div>
+            </div>
+            <div class="project-content" style="min-height: 300px">
+                <h4>Grafiikkatyyli</h4>
+                <img src="Animation.gif" class="gif_left">
+                <p>
+                    Mietiskelin grafiikkatyyliä jota lähtisin tavoittelemaan ja mieleeni putkahti ajatus, pystyyklö Unityssa tekemään cartoon-tyylistä varjostusta. Vastaavanlaista olen joskus työstänyt Unreal Enginessä ja tykkäsin siitä kovasti. Pienellä Googlettelulla löytyikin tutoriaaleja, joita jouduin käymään useamman läpi, ennen kuin sain oman shaderin toimimaan. Vieressä olevassa animaatiossa näkyy pallon pinnalla cell shading, teräväreunainen valon heijastuma sekä mustat ulkoreunat. Shadereiden siirtäminen pelihahmoon oli melko yksinkertaista, joskin pelihahmon pienehkö koko aiheuttaa jonkin verran ongelmia mustien ulkoreunojen kanssa. Varjot toimivat kuitenkin todella mukavasti. Toistaiseksi shaderista puuttuu tuki useille valonlähteille, sekin neuvottiin samassa tutoriaalissa, mutta toistaiseksi jätin lisäämättä.
+                </p>
+            </div>
+            <div class="project-content" style="min-height: 270px">
+                <img src="Jump.gif" class="gif_left">
+                <p>
+                    Viereisessä animaatiossa näkyy pelihahmon hyppyanimaatio sekä malliin lisätyt cartoon-shaderit, jotka tosin vaativat vielä reilusti säätöä. Animaatioiden siirtymät eivät ole erityisen sulavia, mutta sen korjaan ehkä sitten joskus.
+                </p>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Seuraavat tavoitteet</h4>
+                    <p>
+                        Seuraavaksi lähden todennäköisesti toteuttamaan niitä varsinaisia rpg-ominaisuuksia, joita varten projekti luotiin. Ensimmäisenä vuorossa voisi olla tavaraluettelon luominen, johon voi vaikka maastosta kerätä esineitä.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Käytetyt tutoriaalit ja lähteet</h4>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>Lähde</th>
+                            <th>Tutoriaalin käyttötarkoitus</th>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=D-HDrhHgATo">'Royal Skies' Youtube-tutoriaali</a></td>
+                            <td>Blender FBX export ja Unity import</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=4HpC--2iowE">'Brackeys' Youtube-tutoriaali</a></td>
+                            <td>3. persoonan kamera</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=_QajrabyTJc">'Brackeys' Youtube-tutoriaali</a></td>
+                            <td>Hyppy ja painovoima</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=RC91uxRTId8">'Ned Makes Games' Youtube-tutoriaali</a></td>
+                            <td>Cartoon shader</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=8Xq7tU5QN1Q">'Ned Makes Games' Youtube-tutoriaali</a></td>
+                            <td>Cartoon outlines shader</td>
+                        </tr>
+                        <!--<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>-->
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            Copyright © 2022 Sari Halonen
+        </div>
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+            <span class="close_button display-topright">&times;</span>
+            <div class="modal-content animate-zoom">
+                <img id="img01">
+            </div>
+        </div>
+    </body>
+</html>

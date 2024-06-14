@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img").src = element.src;
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="project-content">
+                <div>
+                    <h3 style="text-align: center">Ponipeli - 1. väliraportti</h3>
+                    <br>
+                    <div class="flex-container_top">
+                        <div class="link">
+                            <a href="PonyProject.html" class="button" style="width: 200px">Suunnitelma</a>
+                        </div>
+                        <div class="link">
+                            <a href="PonyProject_Report_1.html" class="button" style="width: 200px">1. väliraportti</a>
+                        </div>
+                    </div>
+                    <p>
+                        <br>
+                        Väliraportti hevospeliprojektista.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content" style="min-height: 120px">
+                <h4>Projektin aloitus</h4>
+                <p>
+                    Aloitin projektin importtaamalla hevosmallin animaatioineen ja tekstuureineen Unityyn ja implementoin yksinkertaisen liikkumissysteemin. Tämän jälkeen mallinsin yksinkertaisen esteen ja aloin miettimään miten voisi helpoiten toteuttaa esteen puomien tippumisen mahdollisimman "realistisesti". Päädyin lisäämään hevosen jalkoihin colliderit ja esteen puomille omansa. Puomi ei varsinaisesti ole kiinni missään, se on vain asetettu esteessä olevien kiinnikkeiden päälle ja se tippuu jo pienestä kosketuksesta.
+
+                    Ensimmäinen ongelma jonka kohtasin esteiden kanssa oli se, miten pelaaja pystyi potkimaan puomeja sen jälkeen, kun ne olivat jo maahan tippuneet. Tämä ei muuten olisi ongelma, mutta asetuksista riippuen ne joko lähtevät salamannopeasti taivaanrantaa kohti tai hidastavat pelaajan liikkumista. Ratkaisuksi tähän kehittelin koodin, joka poisti pelaajan ja puomin välisen collisionin, kun puomiin oli kerran osuttu. Näin puomi jäi esteeltä tiputtuaan paikoilleen, eikä estä pelaajan liikkeitä tai lähde lentämään kentältä.
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>3D-mallin visuaalinen päivitys</h4>
+                <p>
+                    Olen jo jonkin aikaa halunnut opetella 3D-sculptausta ja ns. game-ready 3D-mallin tekoa. Vapaa-ajalla olen jonkin verran Zbrushilla sculptaillut mutta kyseinen ohjelma on ilman opiskelijalisenssiä melko hinnakas, varsinkin kun sitä käyttää vain muutaman kerran, sekä myös melko työläs opeteltava. Tätä projektia varten otin tavoitteeksi saada Blenderillä aikaiseksi mallin, josta voisin baketa (engl. baking) normal mapin korkearesoluutioisesta mallista ja käyttää sitä alhaisen resoluution mallissa tuomaan lisää yksityiskohtia. Blenderissä pystyin helposti aiemman kokemuksen avulla tekemään korkearesoluutioisesta mallista pienempiresoluutioisen version käyttäen pelkästään neliöitä. Tämä prosessi vaati hieman opettelua, mutta neliöiden käytössä on se etu, että resoluutiota voi helposti lisätä tarvittaessa.
+                    <br>
+                    <br>
+                    Mallinnuksen jälkeen oli vuorossa animointi ja päädyin käyttämään Blenderin Rigify-lisäosan sisältämää hevosen luurankoa animointiin. Oman luurangon tekeminen olisi kyllä kiinnostanut, mutta se on melko työläs prosessi erityisesti, jos haluaa huolella tehdä oikeasti hyvän luurangon. Rigify ei oikeasti ole tarkoitettu pelien tekoon ja siinä on todella paljon luita, mikä tekee siitä todennäköisesti hieman turhan raskaan. Lisäksi luurangon hierarkian kanssa tuli ongelmia, kun animaatiot piti saada siirrettyä Unityyn.
+                    <img src="unity_import.png" class="floating_image" alt="Luurangon hierarkian ongelmia Unityyn importatessa.">
+                    En ollut aluksi varma, mistä ongelmat johtuivat ja ongelman lähteen selvittämiseen kului yllättävän paljon aikaa. Blenderissä kaikki näytti aina olevan kunnossa ja ongelmat ilmenivät vain Unityyn vietäessä, joten se vaikeutti ongelman diagnosointia huomattavasti. Luiden hiararkiaa päädyin tutkimaan tarkemmin vasta useamman tunnin troubleshoottaamisen jälkeen ja sekin oli sattumaa, että törmäsin videoon, jossa oli hieman vastaavanlaista ongelmaa, joskin ei kuitenkaan ihan sitä mitä etsin. Viereisessä kuvassa on nähtävissä kuvankaappaus Unitystä, jossa osa luurangosta liikkuu ihan oikein eteenpäin, mutta osa jää liian taakse jumittamaan tai ei liiku ollenkaan. Ongelma ei kuitenkaan koskenut läheskään kaikkia animaatioita, mikä ei taas omalta osaltaan ainakaan helpottanut ongelman selvittämistä. Ongelma kaiken lisäksi tuntui toisinaan korjautuvan vain muuttamalla Unityn import-asetuksia, mutta näin ei kuitenkaan ollut. Olikin todella huojentavaa löytää ongelmaan oikea ratkaisu monen tunnin selvitystyön jälkeen.
+                </p>
+                <br>
+                <p style="width: 100%; text-align: center; font-size: 12px">Hevosmalli Rigify-luurankonsa (armature) kanssa Blenderissä.</p>
+                <img style="width: 40%" src="horse_armature.png" alt="Hevosmalli Rigify-luurankonsa (armature) kanssa Blenderissä.">
+                <br>
+                <div style="width: 50%; float: left; margin-bottom: 25px; padding-left: 15%; padding-right: 5%">
+                    <p style="text-align: center; font-size: 12px">Päivitetty hevosen 3D-malli ilman normal mappia. Klikkaa kuva suuremmaksi.</p>
+                    <img src="horse_no_normal.png" onclick="onClick(this)" class="thumbnail" alt="Päivitetty hevosen 3D-malli ilman normal mappia.">
+                </div>
+                <div style="width: 50%; float: left; margin-bottom: 25px; padding-right: 15%; padding-left: 5%">
+                    <p style="text-align: center; font-size: 12px">Päivitetty hevosen 3D-malli normal mapin kanssa. Klikkaa kuva suuremmaksi.</p>
+                    <img src="horse_with_normal.png" onclick="onClick(this)" class="thumbnail" alt="Päivitetty hevosen 3D-malli normal mapin kanssa.">
+                </div>
+            </div>
+            <br>
+            <div class="project-content">
+                <h4>Custom shader</h4>
+                <p>
+                    Halusin hevoselle edes jotenkin realistisesti toimivan valoefektin turkkiin. Törmäsin sattumalta Youtube-videoon, jossa esiteltiin Unity Asset Storessa myynnissä olevaa pakettia eikä edes varsinaisesti liittynyt aiheeseen. Tässä videossa pisti silmään kuitenkin melko realistisesti toimiva valaistus nimenomaan videolla näkyvässä hevosmallissa ja aloin pohtimaan ja etsimään tietoa miten voisin vastaavan toteuttaa itse. Meinasin vaihtaa render pipelinen HDRP:hen (High Resolution Render Pipeline), sillä siinä on sisäänrakennettuna ihan Unityn omissakin shaddereissa "anisotropic specular highligts. Tämän efektin olin todennut tiedonhaun kautta tuottavan sellaisen efektin millaista olin etsimässä. HDRP ei ollut kuitenkaan omaan käyttööni sopiva ja onnistuinkin löytämään Youtubesta erään käyttäjän itse tekemän URP:lle (Universal Render Pipeline) tarkoitetun shader subgraafin, joka tuotti haluamani lopputuloksen. Shader graafin johon subgraafi asetetaan jouduin toki itse luomaan ja se vaati hieman säätöä, mutta onnistuin kuitenkin pääsemään omaa silmää miellyttävään lopputulokseen.
+                </p>
+                <br>
+                <p style="text-align: center; font-size: 12px">Päivitetty malli vietynä Unityyn custom shaderin kanssa. Klikkaa kuva suuremmaksi.</p>
+                <img src="horse_in_unity.png" onclick="onClick(this)" class="thumbnail" alt="Päivitetty malli vietynä Unityyn custom shaderin kanssa.">
+            </div>
+            <div class="project-content">
+                <h4>Harja ja häntä</h4>
+                <p>
+                    Harjaa ja häntää en halunnut manuaalisesti animoida, joten aluksi kokeilin käyttää Unityn cloth-simulaatiota. Se toimi jotenkin mutta oli todella vaikea käyttää. Samassa video josta sain inspiraation valaistukseen, oli käytetty Magica Cloth -nimistä asset pakettia Unityn storesta. Olen joskus jostain Humble Bundlesta tullut sen hankkineeksi, joten päätin seuraavaksi kokeilla sitä. Simulaation asettaminen häntään sekä harjaan on huomattavasti helpompaa kuin Unityn cloth-simulaation ja vaikka asetukset ovat vielä ihan mitä sattuu ja collidereitakin puuttuu ainakin kaulasta, toimii hännän ja harjan simulaatio suhteellisen hyvin.
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Video</h4>
+                <p>
+                    Videossa näkyy hyvin, miten hevosesta heijastuu valo custom shaderin johdosta. Videossa on esitelty myös tähän mennessä tehdyt animaatiot, joista osa on hieman keskeneräisiä. Harjan ja hännän simulaatio on nähtävissä myös, harja menee kaulasta läpi toistaiseksi, sillä kaulassa ei ole yhtäkään collideria. Olin ne kerran asettanut, mutta exporttasin mallin Blenderistä vahingossa pelkkänä luurankona, joten kaikki Unityn komponentit jotka oli itse 3D-malliin liitetty, menivät siinä samalla. 
+                    <br>
+                    <br>
+                    Ympäristö on toteutettu sekin Humble Bundlesta ostetulla asset paketilla. Ympäristön mallintamiseen menisi turhaan aikaa varsinkin, kun saatavilla on todella paljon erittäin kivan näköisiä paketteja. Omistan useamman fantasia-/cartoon-tyylisen paketin, joten piti vain valita parhaiten oman projektin tyyliä vastaava. Paketin nimi on Stylized Fantasy : Forest Environment ja nykyään se on vanhentunut eikä siihen ole saatavilla päivityksiä. Jotkin materiaalit eivät toimi oikein, mutta muokkaamalla Unityn omia materiaaleja puuttuvista sai tarpeeksi kivan näköisiä.
+                </p>
+                <br>
+                <div style="text-align: center">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5jJ6eM1HrKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Mitä seuraavaksi</h4>
+                <p>
+                    Seuraavaksi vuorossa olisi animaatioiden viimeistely ja sen jälkeen pääsenkin työstämään peliin jotain varsinaista estehyppymekaniikkaa. Esteitä tulisi mallintaa useita lisää, mutta ne ovat onneksi melko simppeleitä ja nopeita tehdä. Lisäksi haluaisin muuttaa sen miten hevoshahmo kääntyy maan suuntaisesti; tällä hetkellä se on erittäin tökkiväistä vaikkakin se toimii kyllä ihan niinkuin kuuluukin. 
+                </p>
+            </div>
+            <!--<div class="project-content">
+<div>
+<h4>OTSIKKO</h4>
+<p>
+TEKSTI
+</p>
+</div>
+</div>-->
+            <div class="project-content">
+                <div>
+                    <h4>Käytetyt tutoriaalit ja lähteet</h4>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>Lähde</th>
+                            <th>Tutoriaalin käyttötarkoitus</th>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=SZmKGUo0oIg">'jinho Lee' Youtube-video</a></td>
+                            <td>Anisotropic Specular URP sub graph</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=6uxUTdYKzIw">'Pierrick Picaut' Youtube-tutoriaali</a></td>
+                            <td>Blenderin animation curves</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://www.youtube.com/watch?v=4WCuMszwM2U">'Blender Secrets' Youtube-tutoriaali</a></td>
+                            <td>Baking normal map from multires modifier</td>
+                        </tr>
+                        <!--<tr>
+<td><a href="https://www.youtube.com/watch?v=RC91uxRTId8">'Ned Makes Games' Youtube-tutoriaali</a></td>
+<td>Cartoon shader</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=8Xq7tU5QN1Q">'Ned Makes Games' Youtube-tutoriaali</a></td>
+<td>Cartoon outlines shader</td>
+</tr>-->
+                    </table>
+                </div>
+            </div>
+            <!--<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+</div>
+</div>-->
+            <div id="modal" class="modal" onclick="this.style.display='none'">
+                <span class="close_button display-topright">&times;</span>
+                <div class="modal-content animate-zoom">
+                    <img id="img" style="max-height: 800px">
+                    <div id="caption"></div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2023 Sari Halonen
+            </div>
+        </div>
+    </body>
+</html>

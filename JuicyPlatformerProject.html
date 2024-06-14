@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img").src = element.src;
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="project-content">
+                <div>
+                    <h3 style="text-align: center">Juicyplatformer</h3>
+                    <p>
+                        <br>
+                        Projekti toteutettu ryhmätyönä 8-luokkalaisten kulttuuripolku-tapahtumaa varten.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Tekniset jutut</h4>
+                <table style="width: 100%; padding: 10px 50px 10px 50px; text-decoration: none">
+                    <tr></tr>
+                    <th style="width: 50%">Pelimoottori</th>
+                    <td>Unity </td>
+                    <tr>
+                        <th style="width: 50%">Alusta</th>
+                        <td>PC</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="project-content" style="min-height: 120px">
+                <h4>Grafiikkatyyli</h4>
+                <p>
+                    -
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Pelin idea</h4>
+                <p>
+                    Simppeli platformer, jossa pelaaja voi sivussa olevilla painikkeilla lisätä audiovisuaalisia ominaisuuksia peliin.
+                </p>
+            </div>
+            <!--<div class="project-content">
+<div>
+<h4>OTSIKKO</h4>
+<p>
+TEKSTI
+</p>
+</div>
+</div>
+<!--<div class="project-content">
+<div>
+<h4>Käytetyt tutoriaalit ja lähteet</h4>
+<table style="width: 100%">
+<tr>
+<th>Lähde</th>
+<th>Tutoriaalin käyttötarkoitus</th>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=D-HDrhHgATo">'Royal Skies' Youtube-tutoriaali</a></td>
+<td>Blender FBX export ja Unity import</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=4HpC--2iowE">'Brackeys' Youtube-tutoriaali</a></td>
+<td>3. persoonan kamera</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=_QajrabyTJc">'Brackeys' Youtube-tutoriaali</a></td>
+<td>Hyppy ja painovoima</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=RC91uxRTId8">'Ned Makes Games' Youtube-tutoriaali</a></td>
+<td>Cartoon shader</td>
+</tr>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=8Xq7tU5QN1Q">'Ned Makes Games' Youtube-tutoriaali</a></td>
+<td>Cartoon outlines shader</td>
+</tr>
+<!--<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="LINKKI">Youtube-tutoriaali</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+</div>
+</div>-->
+            <div id="modal" class="modal" onclick="this.style.display='none'">
+                <span class="close_button display-topright">&times;</span>
+                <div class="modal-content animate-zoom">
+                    <img id="img" style="max-height: 800px">
+                    <div id="caption"></div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2022 Sari Halonen
+            </div>
+        </div>
+    </body>
+</html>

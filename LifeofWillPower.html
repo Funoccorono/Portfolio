@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img").src = element.src;
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="project-content">
+                <div>
+                    <h3 style="text-align: center">The Life of Will Power</h3>
+                    <br>
+                    <p>
+                        <br>
+                        Raportti Xamk Game Jam II aikana tehdystä pelistä
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Jamin ja pelin teema</h4>
+                    <p>
+                        Jamin teemana oli 'willpower'. Päädyimme tiimin kesken ottamaan teeman melko kirjaimellisesti ja pelin päähenkilön nimeksi tuli '"Will Power'. Peli koostuu kolmesta (kahdesta) pienemmästä projektista, joista yksi oli kahden tiimiläisen yhteistyönä tekemä ja kaksi muuta yksittäisten tiimiläisten tuotoksia. Yksi ei ehtinyt valmistua, joten sitä ei voitu sisällyttää lopulliseen peliin. Itse olin osana kahden hengen tiimiä.
+                        <br>
+                        <br>
+                        Ensimmäinen osa on melko utopistinen kuvaus päähenkilön "syntymästä", joka aikajaksoltaan osuu jonnekin aikaan ennen henkilöän syntymää. Will haluaisi olla 3D-objekti ja pelissä kävellään ympäri 3D-maailmassa juttelemassa billboardeina toteutetuille 2D-hahmoille. Kun kaikilta kentällä olevilta hahmoille on juteltu, peliin spawnaa leijuvia velhoja, jotka pelaajan tulee päihittää. Pelin idea on melko vaikea selittää ja alempana onkin linkki koko pelin läpipeluuvideoon.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Tekniset jutut</h4>
+                <table style="width: 100%; padding: 10px 50px 10px 50px; text-decoration: none">
+                    <tr></tr>
+                    <th style="width: 50%">Pelimoottori</th>
+                    <td>Unity 2021.3.8f1</td>
+                    <tr>
+                        <th style="width: 50%">Alusta</th>
+                        <td>PC/WebGL</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="project-content">
+                <h4>Grafiikkatyyli</h4>
+                <p>
+                    Low-pony 3D-maailma + 2D-billboard-hahmot, kamerassa filter joka saa grafiikat muistuttamaan PS1-aikaisia grafiikoita. 3D-mallit on tosiasiassa melko hirveän näköisiä mutta filtteri saa pelin näyttämään paljon paremmalta, kuin miltä se ilman filtteriä näyttäisi. Peliin lisättiin myös sumu jottei pelaaja näkisi koko pienehköä pelimaailmaa kerralla ja se sopi muutenkin pelin tyyliin.
+                </p>
+                <br>
+                <p style="text-align: center; font-size: 12px">Vasemmalla pelinäkymä ilman filtteriä ja sumun kanssa, oikealla filtterillä sekä sumun kanssa. Klikkaa kuva suuremmaksi.</p>
+                <img src="willpower_collab.png" onclick="onClick(this)" class="thumbnail" alt="Pelinäkymän eri versiot.">
+            </div>
+            <div class="project-content">
+                <h4>Projektin toteutus</h4>
+                <p>
+                    Pelin suunnitteluun osallistui tottakai molemmat peliä työstävät ja suunnittelua tehtiin jonkin verran koko jamin ajan. Pelille ei mitään kovin hyvää suunnitelmaa alun perin edes ollut, mutta jamin edetessä peli alkoi pikkuhiljaa muovautua johonkin suuntaan, josta sitä oli mukava kehittää eteenpäin. Ideoita heiteltiin sitä mukaan, kun niitä tuli mieleen ja yhdessä mietittiin ja päätettiin toteutetaanko kyseinen idea vai ei. Peli toteutettiin melko tiiviissä yhteistyössä työparin kanssa mutta molemmilla oli myös selvästi toisen hommista erillään olevia vastuualueita. Työparini hoiti kaikki 2D-taiteen, kun taas itse tein kaikki tarvittavat 3D-mallit tekstuureineen ja asettelin niitä pelimaailmaan. Koodaamiseen osallistuivat molemmat eikä koodattavia skriptejä jaettu mitenkään järjestelmällisesti vaan koodattiin mitä juuri sillä hetkellä tarvittiin.
+                    <br>
+                    <br>
+                    Tämä oli ensimmäinen Game Jamini ja kokemus oli erittäin positiivinen. Lopputuote ei tietenkään jamipelinä ole mikään viimeistelty tuotos, mutta oli hauskaa voida laittaa kaikenmoisia ehkä tyhmiäkin ideoita peliin. Harvemmin ns. kunnollisissa projekteissa voi heitellä hyvin kokeellisia ominaisuuksia peliin sitä mukaa mitä haluaa juuri sillä hetkellä kokeilla ja tämä jamipeli oli sellaiseen hommaan oikein erinomainen projekti.
+                </p>
+                <br>
+                <p style="text-align: center; font-size: 12px">Pelimaailma koostuu 9-laatasta, joista pelaaja voi liikkua vain keskimmäisellä. Klikkaa kuva suuremmaksi.</p>
+                <img src="willpower_terrain.png" onclick="onClick(this)" class="thumbnail" alt="Pelimaailma koostuu 9-laatasta, joista pelaaja voi liikkua vain keskimmäisellä.">
+            </div>
+            <div class="project-content">
+                <h4>Ongelmia</h4>
+                <p>
+
+                    Jamille tyypillisesti aika meinasi tietenkin loppua kesken ja viimehetken muutoksia tehdessä alkoi olla jo kiire. Suurin ongelma kuitenkin oli se miten erilaiselta valaistus näytti sumun kanssa buildatussa pelissä verrattuna editoriin. Tälle syyksi paljastui se, ettei valaistusta missään vaiheessa "bakettu" jossa tuntui sillä hetkellä kestävän ikuisuus. Peli kuitenkin saatiin "valmiiksi" ajoissa ja jamipelin tiedostoa pystyi vielä ajan loppumisen jälkeen muokkaamaan onneksi sillä siihen oli pelien yhdistämisestä johtuen eksynyt pari pientä bugia.
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Video</h4>
+                <div style="text-align: center">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C3n-h5TsVa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Käytetyt tutoriaalit ja lähteet</h4>
+                    <table style="width: 100%">
+                        <tr>
+                            <th>Lähde</th>
+                            <th>Tutoriaalin käyttötarkoitus</th>
+                        </tr>
+                        <tr>
+                            <td><a href="https://youtu.be/Sru8XDwxC3I">'Thomas Friday' Youtube-tutoriaali</a></td>
+                            <td>Pixelated look in Unity</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="modal" class="modal" onclick="this.style.display='none'">
+                <span class="close_button display-topright">&times;</span>
+                <div class="modal-content animate-zoom">
+                    <img id="img" style="max-height: 800px">
+                    <div id="caption"></div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2023 Sari Halonen
+            </div>
+        </div>
+    </body>
+</html>

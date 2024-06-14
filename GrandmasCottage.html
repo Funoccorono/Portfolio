@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img").src = element.src;
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="project-content">
+                <div>
+                    <h3 style="text-align: center">Grandma's Cottage</h3>
+                    <p>
+                        <br>
+                        Global Game Jam 2023 -jamin aikana kuuden ihmisen ryhmässä toteutettu peliprojekti. Jamin teemana oli juuret.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Tekniset jutut</h4>
+                <table style="width: 100%; padding: 10px 50px 10px 50px; text-decoration: none">
+                    <tr></tr>
+                    <th style="width: 50%">Pelimoottori</th>
+                    <td>Unity 2021.3.16f1</td>
+                    <tr>
+                        <th style="width: 50%">Alusta</th>
+                        <td>PC</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="project-content">
+                <h4>Grafiikkatyyli</h4>
+                <p>
+                    Low-ish poly 3D-grafiikka
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Pelin idea</h4>
+                <p>
+                    Jamin teeman pohjalta lähdettiin porukassa miettimään millä tavalla teema haluttiin tuoda pelissä esiin. Pitkän miettimisen jälkeen päädyttiin käyttämään juuria henkilön taustana ja pelin ideana onkin pelihahmon "juurille" paluu. Pelin gameplay keskittyy lähinnä 3D-tasohyppelyyn.
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Projektin toteutus</h4>
+                <p>
+                    Projektin suunnittelu tehtiin luonnollisesti koko tiimin voimin, joskin yksittäisiä asioita voitiin päättää pienemmissä porukoissa, kuin koko tiimin voimin. Itse toteutuksessa oma osuuteni poikkesi siitä mitä yleensä tekisin eli koodaamisesta. Tiimissä oli henkilö, joka halusi vaihteen vuoksi koodata, kun yleensä hän tekee jotain taidepuolen juttuja joten päädyin sitten itse tekemään enemmän näitä hommia. Tiimissä oli kuitenkin toinenkin 3D-mallintaja ja lisäksi erikseen vielä yksi henkilö joka keskittyi erityisesti pelihahmon suunnitteluun sekä mallintamiseen. 3D-mallien lisäksi tein itse jonkinlaisia "hanttihommia", auttelin muita tiimin jäseniä erityisesti koodin kanssa ja tein sellaisia hommia mitä piti saada nopeasti tehtyä mutta muilla ei ollut juuri sillä hetkellä siihen aikaa. Työtunteihin nähden tuntuu etten kovin paljoa saanut tehtyä vaikka en paikalla ollessa käytännössä hetkeäkään istuskellut mitään tekemättä.
+                    <br>
+                    <br>
+                    Varsinaisia 3D-malleja tuli projektiin tehtyä vain muutama, mutta ne on tehty huolella, jotta ne näyttäisivät hyvältä myös pelihahmon ollessa todella pieni ja objektit verrattuna todella suuria. Jonkin verran aikaa käytin muiden mallien origin pointtien ja tekstuurien korjaamiseen mutta tämä työ valui hukkaan, kun mallintaja teki näistä uudet versiot, kun en ollut paikalla. Pelikenttänä toimiva mökki koostuu hirsistä ja mittakaavan oikein saaminen oli yllättävän vaikeaa. Mökki on kasattu Blenderissä ja exportattu suoraan yhdenä tiedostona Unityyn jotta objekteja asetellessa ei joudu enää mökkiä asettelemaan erikseen yksittäisistä hirsistä/seinistä.
+                </p>
+                <br>
+                <p style="text-align: center; font-size: 12px">Kuvankaappaus Blenderistä teksturoiduista 3D-malleista. Klikkaa kuva suuremmaksi.</p>
+                <img src="cottage_3d_models.png" onclick="onClick(this)" class="thumbnail" alt="Kuvankaappaus Blenderistä teksturoiduista 3D-malleista.">
+            </div>
+                        <div class="project-content">
+                <h4>Ongelmia</h4>
+                <p>
+                    Jonkin verran ongelmia aiheutti kommunikaatiopuutokset mikä on toisaalta ymmärrettävää jamipeliä tehtäessä. Tiimin jäsenet väsyvät eri tahdissa joten nukkumassa käydään silloin kun väsyttää eikä aina voi odotella, että kaikki tarvittavat jäsenet ovat paikalla jotain tiettyä asiaa mietittäessä.
+                    <br>
+                    <br>
+                    Ongelmia aiheutti toki myös github ja merge confliktit. Näiden ratkaisu osoittautui yllättävän vaikeaksi, koska usealla tiimiläisellä oli erilainen sovellus gitin käyttöön ja kesti hyvä tovi ymmärtää miten uudesta sovelluksesta löytyy oikeat asiat. Melko paljon jouduttiin loppujen lopuksi tekemään yhdellä tai kahdella koneella ongelmien välttämiseksi mikä ei ainakaan auttanut kiireellisyyden kanssa.
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Video</h4>
+                <div style="text-align: center">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/-eNwo2Xt9bA?si=MK1GajRbbuQrvHst" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="modal" class="modal" onclick="this.style.display='none'">
+                <span class="close_button display-topright">&times;</span>
+                <div class="modal-content animate-zoom">
+                    <img id="img" style="max-height: 800px">
+                    <div id="caption"></div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2023 Sari Halonen
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img01").src = element.src;
+                document.getElementById("modal01").style.display = "block";
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="content">
+                <div class="content_left">
+                    <img src="rpgthumbnail.png" onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3><a href="RPGProject.html">RPG-Projekti</a></h3>
+                    <p>
+                        Pohja RPG-pelille jossa voi harjoitella erilaisten rpg-mekaniikkojen toteutusta ja muuta vastaavaa.
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_left">
+                    <img src="ponygamethumbnail.png" 
+                         onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3><a href="PonyProject.html">Ponipeli-Projekti</a></h3>
+                    <p>
+                        Hevosteemainen seikkailu-/simulaatiopeli.
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_left">
+                    <img src="ribbit.png" 
+                         onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3><a href="LifeofWillPower.html">The Life of Will Power</a></h3>
+                    <p>
+                        XAMK Game Jam II -jamin aikana toteutettu peliprojekti.
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_left">
+                    <img src="grandmascottage_thumbnail.jpg" 
+                         onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3><a href="GrandmasCottage.html">Grandma's Cottage</a></h3>
+                    <p>
+                        FGJ23-jamin aikana toteutettu peliprojekti.
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_left">
+                    <img src="hearthbound_thumbnail.png" 
+                         onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3><a href="HearthBound.html">HearthBound</a></h3>
+                    <p>
+                        Xamk Game Jamin aikana toteutettu peliprojekti.
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_left">
+                    <img src="juissi_thumbnail.PNG" 
+                         onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3><a href="JuicyPlatformerProject.html">Juicy Platformer</a></h3>
+                    <p>
+                        8-luokkalaisten kulttuuripolku-tapahtumaa varten ryhmässä suunniteltu ja toteutettu pelin prototyyppi.
+                    </p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content_left">
+                    <img src="foxgame.png" 
+                         onclick="onClick(this)" class="thumbnail">
+                </div>
+                <div class="content_right">
+                    <h3>Endangered</h3>
+                    <p>
+                        Vuosia sitten Unreal Enginellä toteutettu pieni hack 'n slash-peliprojekti, joka jäi olosuhteista johtuen ikuisesti keskeneräiseksi. Toteutettu kahden ihmisen ryhmässä.
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2023 Sari Halonen
+            </div>
+        </div>
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+            <span class="close_button display-topright">&times;</span>
+            <div class="modal-content animate-zoom">
+                <img id="img01">
+            </div>
+        </div>
+    </body>
+</html>

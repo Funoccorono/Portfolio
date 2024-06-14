@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img").src = element.src;
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+<a href=""><i class="fab fa-facebook-square"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-twitter"></i></a>
+</div>
+<div class="link">
+<a href=""><i class="fab fa-instagram"></i></a>
+</div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="project-content">
+                <div>
+                    <h3 style="text-align: center">HearthBound</h3>
+                    <br>
+                    <p>
+                        <br>
+                        Raportti kevään 2023 Xamk Game Jamin aikana tehdystä pelistä
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Jamin teema</h4>
+                    <p>
+                        Jamin teemaksi arvottiin kaksi korttia ja peliin oli tarkoitus sisällyttää jotain molemmista korteista.
+                    </p>
+                    <br>
+                    <div style="width: 50%; float: left; margin-bottom: 25px; padding-left: 15%; padding-right: 5%">
+                        <p style="text-align: center; font-size: 12px">1. kortti</p>
+                        <img src="card_1.png" onclick="onClick(this)" class="thumbnail" alt="1. kortti">
+                    </div>
+                    <div style="width: 50%; float: left; margin-bottom: 25px; padding-right: 15%; padding-left: 5%">
+                        <p style="text-align: center; font-size: 12px">2. kortti</p>
+                        <img src="card_2.png" onclick="onClick(this)" class="thumbnail" alt="2. kortti">
+                    </div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Tekniset jutut</h4>
+                <p>
+                </p>
+                <table style="width: 100%; padding: 10px 50px 10px 50px; text-decoration: none">
+                    <tr></tr>
+                    <th style="width: 50%">Pelimoottori</th>
+                    <td>Unity 2020.3.26f1</td>
+                    <tr>
+                        <th style="width: 50%">Alusta</th>
+                        <td>PC</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="project-content">
+                <h4>Grafiikkatyyli</h4>
+                <p>
+                    Yhdistelmä 2D-pikseligraiikkaa ja 3D-grafiikkaa.
+                </p>
+            </div>
+            <div class="project-content">
+                <div>
+                    <h4>Pelin idea</h4>
+                    <p>
+                        Pelin ideana on toteuttaa "tilauksia" joissa määritellään kunkin ominaisuuden määrä. Tilaukset on satunnaisesti generoituja ja osa niistä on vaikeampia ja osa taas helpompia. Pelaajan tulee noppia heittämällä yrittää saada ominaisuuksien pisteet mahdollisimman lähelle tilauksessa määriteltyä ja saa tästä pisteitä sen mukaan miten lähelle pyydettyjä pisteitä pelaaja pääsee. 
+                        <br>
+                        <br>
+                        Noppia voi heittää niin monta kuin haluaa kunhan niitä vain riittää pöydällä ja jokaisen tilauksen jälkeen pelaaja voi valita uusia noppia niin, että niitä on jälleen yhteensä kuusi. Peli jatkuu käytännössä ikuisesti eikä peliin ole rakennettu mitään erityistä voittoehtoa.
+                    </p>
+                </div>
+            </div>
+            <div class="project-content">
+                <h4>Projektin eteneminen ja oma osuuteni</h4>
+                <p>
+                    Kuten muisstakin jameissa, projekti aloitettiin suunnittelemalla koko tiimin voimin millainen peli halutaan toteuttaa ja miten teemaa halutaan hyödyntää. Pelin idea jäi hieman huteraksi ja huolellisemmalla suunnittelulla olisi ehkä päästy selkeämpään ideaan. Yksi tiimin jäsenistä halusi harjoitella pikseliarttia joten grafiikkatyyliin haluttiin tämän takia sisällyttää pikselikuvia. Koko peli olisi periaatteessa voinut olla pikseligrafiikkaa mutta pelissä olevista nopista haluttiin hieman interaktiivisempia kuin mitä 2D-nopista lyhyessä ajassa pystyisi tekemään joten ne päädytttiin tekemään 3D-malleina ja kameraan laitettiin pikselifiltteri.
+                    <br>
+                    <br>
+                    Tiimissä oli toisinsanoen yksi jäsen joka teki pelkästään pikselitaidetta suunnitteluun osallistumisen lisäksi ja kaksi muuta jäsentä työskenteli Unityn kanssa. Itse tein jonkin verran hommia koodin kanssa, hieman taidepuolen juttuja kuten noppien 3D-malli ja UI-assetteja mutta eniten aikaa kului Unityn editorin puolella. Asettelin pelinäkymää ja yhdistelin 2D ja 3D-assetteja niin, että  ne näkyvät kamerassa nätisti. 3D ja 2D-näkymien yhdistely osoittautui yllättävän vaikeaksi mutta lopulta peli saatiin näyttämään ihan kivalta. Efektien tasoa säädin myös melko pitkään, noppien haluttiin näyttävän pikselisiltä mutta silmäluvuista piti kuitenkin saada helposti selvää. Ääniefektien tekemistä itse harkittiin mutta päädyin kuitenkin etsimään ilmaiseksi saatavilla olevat ääniefektit, joiden tekijät on merkattu pelin credits-osioon.
+                </p>
+            </div>
+            <div class="project-content">
+                <h4>Video</h4>
+                <div style="text-align: center">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VqpdVzBaQ5M?si=e5VrMnBA-quvPdpv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div id="modal" class="modal" onclick="this.style.display='none'">
+                <span class="close_button display-topright">&times;</span>
+                <div class="modal-content animate-zoom">
+                    <img id="img" style="max-height: 800px">
+                    <div id="caption"></div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2023 Sari Halonen
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Portfolio</title> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/3986bf73f2.js"></script>
+    </head>
+    <body>
+        <script>
+            function onClick(element) {
+                document.getElementById("img").src = element.src;
+                document.getElementById("modal").style.display = "block";
+                document.getElementById("caption").innerHTML = element.alt;
+            }
+        </script>
+        <div class="main_container">
+            <div class="header">
+                <h1>Sari Halonen</h1>
+                <h4>Peliohjelmoinnin opiskelija Kotkasta</h4>
+            </div>
+            <hr class="top">
+            <div class="flex-container_top">
+                <div class="link">
+                    <a href="index.html" class="button">Etusivu</a>
+                </div>
+                <div class="link">
+                    <a href="art.html" class="button">Taide</a>
+                </div>
+                <div class="link">
+                    <a href="projects.html" class="button">Projektit</a>
+                </div>
+                <div class="link">
+                    <a href="contact.html" class="button">Yhteystiedot</a>
+                </div>
+            </div>
+            <div class="flex-container_bottom">
+                <!--<div class="link">
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                </div>
+                <div class="link">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="link">
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>-->
+                <div class="link">
+                    <a href="https://www.deviantart.com/funoccorono"><i class="fab fa-deviantart"></i></a>
+                </div>
+            </div>
+            <hr class="bottom">
+            <div class="content">
+                <div class="flex-container">
+                    <div class="column">
+                        <img src="deers.png" onclick="onClick(this)" class="tiny_thumbnail" alt="Henkilökohtainen minimalistisella tyylillä toteutettu prokekti." style="margin: -350px 0px 0px -525px;">
+                    </div>
+                    <div class="column">
+                        <img src="concept.png" onclick="onClick(this)" class="tiny_thumbnail" alt="TEKSTIÄ" style="margin: -250px 0px 0px -180px;">
+                    </div>
+                    <div class="column">
+                        <img src="elder_terraneck.PNG" onclick="onClick(this)" class="tiny_thumbnail" alt="TEKSTIÄ" style="margin: -160px 0px 0px -220px;">
+                    </div>
+                    <div class="column">
+                        <img src="wolvden_1.PNG" onclick="onClick(this)" class="tiny_thumbnail" alt="TEKSTIÄ" style="margin: -180px 0px 0px -80px;">
+                    </div>
+                </div>
+            </div>
+            <div id="modal" class="modal" onclick="this.style.display='none'">
+                <span class="close_button display-topright">&times;</span>
+                <div class="modal-content animate-zoom">
+                    <img id="img">
+                    <div id="caption"></div>
+                </div>
+            </div>
+            <div class="footer">
+                Copyright © 2022 Sari Halonen
+            </div>
+        </div>
+    </body>
+</html>
